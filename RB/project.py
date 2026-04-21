@@ -1,15 +1,15 @@
-# Создаем функцию которая чекает является ли число простым или составным
+# Creating a function that checks whether a number is prime or composite
 def isPrime(n):
     if n < 2:
-        return "Ни простое ни составное"
+        return "Neither prime nor composite"
     for i in range(2, int(n**0.5) + 1):
         if n % i == 0:
-            return "Составное число"
-    return "Простое число"
-# Тестим функцию
+            return "Composite number"
+    return "Simple number"
+# Testing function
 try:
-    a = int(input("Введите число: "))
+    a = int(input("Input integer number: "))
     print(f"{a} - {isPrime(a)}")
-# Если вводится не целое число то выводит ошибку
+# If a non-integer number is entered, an error is displayed
 except ValueError:
-    print("Пожалуйста, введите целое число.")
+    print("Please, enter integer number!!!")
