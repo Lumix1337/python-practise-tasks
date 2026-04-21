@@ -1,5 +1,7 @@
 # Creating a function that checks whether a number is prime or composite
 def isPrime(n):
+    if n < 0:
+        return "Negative numbers are not considered"
     if n < 2:
         return "Neither prime nor composite"
     for i in range(2, int(n**0.5) + 1):
